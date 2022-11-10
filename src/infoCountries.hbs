@@ -1,0 +1,25 @@
+
+{{#each this}}
+<ul class="list-info">
+    <li class="flex">
+        <img src="{{flags.svg}}" alt="{{name.official}}" width="20" height="20">
+        <h2>{{name.official}}</h2>
+    </li class="flex">
+    <li class="flex">
+        <h3>Capital: </h3>
+         <p>{{capital}}</p>
+    </li>
+    <li class="flex">
+         <h3>Population: </h3>
+         <p>{{population}}</p>
+    </li>
+    <li class="flex">
+         <h3>Languages: </h3>
+         <p>
+            {{#each this.languages}}
+            {{this}}<span class="com">,</span>
+            {{/each}}
+        </p>
+    </li>
+</ul>
+{{/each}}
